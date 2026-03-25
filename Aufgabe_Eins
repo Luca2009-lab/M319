@@ -1,0 +1,48 @@
+    package main
+    
+    import "fmt"
+    
+    
+    func main() {
+        fmt.Println("=== Mercators Inventar-Kontrolle ===")
+    
+        // AUFGABE 1: Deklarieren Sie hier die Variablen
+        // Initialwerte: 15 Teppiche, 2.5 kg Gewürze, Route: "Küste"
+        
+    teppiche := 15
+    gewuerzGewicht := 2.5
+    handelsRoute := "Küste"
+        
+        
+    
+        // AUFGABE 2: Simulation einer neuen Lieferung
+        neueTeppiche := -20 // Testwert (kann geändert werden)
+        neueGewuerze := 1.2
+        
+    neueTeppiche := -20
+    neueGewuerze := 1.2
+        
+    
+        fmt.Printf("Aktueller Bestand: %d Teppiche, %.2f kg Gewürze\n", teppiche, gewuerzGewicht)
+    
+        // Prüfen Sie hier: Wenn (teppiche + neueTeppiche) kleiner als 0 ist, 
+        // geben Sie eine Fehlermeldung aus. Ansonsten addieren Sie den Wert.
+        if teppiche+neueTeppiche < 0 {
+        fmt.Println("STOPP! Der Bestand an Teppichen darf nicht negativ werden!")
+    } else {
+        teppiche += neueTeppiche
+        fmt.Println("Inventar erfolgreich aktualisiert.")
+    }
+
+    
+        // Prüfen Sie hier: Falls neueGewuerze > 0 ist, addieren Sie diese zu gewuerzGewicht.
+        // Falls nicht, geben Sie "Ungültiges Gewicht" aus.
+        
+    if neueGewuerze > 0 {
+        gewuerzGewicht += neueGewuerze
+    } else {
+        fmt.Println("Ungültiges Gewicht")
+    }
+
+    fmt.Printf("Endbestand auf Route %s: %d Teppiche, %.2f kg Gewürze\n", handelsRoute, teppiche, gewuerzGewicht)
+
